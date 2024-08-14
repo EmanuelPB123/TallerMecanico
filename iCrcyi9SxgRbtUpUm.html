@@ -1,0 +1,323 @@
+<html><head><base href="https://tallermecanicowebapp.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoEstilo - Taller Mecánico y Estética Automotriz</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+  :root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    opacity: 0.8;
+    z-index: 1;
+  }
+
+  header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+
+  nav {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 1rem;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: var(--accent-color);
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .service {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .service svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+  }
+
+  #appointment-form {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  #appointment-form input, #appointment-form select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  #appointment-form button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #appointment-form button:hover {
+    background-color: #c0392b;
+  }
+
+  #appointment-list {
+    margin-top: 2rem;
+  }
+
+  #appointments {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #appointments li {
+    background-color: var(--background-color);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin: 0.5rem 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>AutoEstilo - Taller Mecánico y Estética Automotriz</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#citas">Citas</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="servicios">
+      <h2>Nuestros Servicios</h2>
+      <div class="service-grid">
+        <div class="service">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+            <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+            <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+            <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+            <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+            <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+          </svg>
+          <h3>Cambio de Aceite</h3>
+          <p>Mantenga su motor en perfectas condiciones con nuestro servicio de cambio de aceite premium.</p>
+        </div>
+        <div class="service">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12" y2="17"></line>
+          </svg>
+          <h3>Diagnóstico Electrónico</h3>
+          <p>Utilizamos la última tecnología para diagnosticar y resolver problemas en su vehículo.</p>
+        </div>
+        <div class="service">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <line x1="22" y1="6" x2="2" y2="6"></line>
+            <line x1="6" y1="10" x2="6" y2="10"></line>
+            <line x1="10" y1="10" x2="10" y2="10"></line>
+            <line x1="14" y1="10" x2="14" y2="10"></line>
+            <line x1="18" y1="10" x2="18" y2="10"></line>
+            <line x1="6" y1="14" x2="6" y2="14"></line>
+            <line x1="10" y1="14" x2="10" y2="14"></line>
+            <line x1="14" y1="14" x2="14" y2="14"></line>
+            <line x1="18" y1="14" x2="18" y2="14"></line>
+          </svg>
+          <h3>Pintura y Detallado</h3>
+          <p>Devuelva el brillo a su vehículo con nuestros servicios de pintura y detallado profesional.</p>
+        </div>
+        <div class="service">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <h3>Instalación de Accesorios</h3>
+          <p>Personalice su vehículo con nuestra amplia gama de accesorios y servicios de instalación.</p>
+        </div>
+      </div>
+    </section>
+    <section id="citas">
+      <h2>Reserva tu Cita</h2>
+      <form id="appointment-form">
+        <input type="text" id="name" placeholder="Nombre" required>
+        <input type="email" id="email" placeholder="Correo Electrónico" required>
+        <input type="tel" id="phone" placeholder="Teléfono" required>
+        <input type="date" id="date" required>
+        <select id="service" required>
+          <option value="">Selecciona un servicio</option>
+          <option value="cambio-aceite">Cambio de Aceite</option>
+          <option value="diagnostico-electronico">Diagnóstico Electrónico</option>
+          <option value="pintura-detallado">Pintura y Detallado</option>
+          <option value="instalacion-accesorios">Instalación de Accesorios</option>
+        </select>
+        <button type="submit">Reservar Cita</button>
+      </form>
+      <div id="appointment-list">
+        <h3>Citas Programadas</h3>
+        <ul id="appointments"></ul>
+      </div>
+    </section>
+    <section id="galeria">
+      <h2>Galería de Trabajos</h2>
+      <div id="gallery-container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <!-- Las imágenes se cargarán dinámicamente aquí -->
+      </div>
+    </section>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Dirección: Avenida AutoEstilo 789, Ciudad Automotriz</p>
+      <p>Teléfono: (123) 456-7890</p>
+      <p>Email: info@autoestilo.com</p>
+    </section>
+  </main>
+  <script>
+    document.getElementById('appointment-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const date = document.getElementById('date').value;
+      const service = document.getElementById('service').value;
+      
+      const appointmentList = document.getElementById('appointments');
+      const appointmentItem = document.createElement('li');
+      appointmentItem.textContent = `${name} - ${service} - ${date}`;
+      appointmentList.appendChild(appointmentItem);
+      
+      // Clear form
+      this.reset();
+      
+      // In a real application, you would send this data to a server
+      console.log('Appointment booked:', { name, email, phone, date, service });
+    });
+
+    // Función para cargar imágenes en la galería
+    function loadGalleryImages() {
+      const galleryContainer = document.getElementById('gallery-container');
+      const imageUrls = [
+        'https://example.com/auto-pintura-1.jpg',
+        'https://example.com/auto-detallado-2.jpg',
+        'https://example.com/auto-accesorios-3.jpg',
+        'https://example.com/auto-reparacion-4.jpg'
+      ];
+
+      imageUrls.forEach(url => {
+        const img = document.createElement('img');
+        img.src = url;
+        img.alt = 'Trabajo de AutoEstilo';
+        img.style.width = '200px';
+        img.style.height = '150px';
+        img.style.objectFit = 'cover';
+        img.style.margin = '10px';
+        img.style.borderRadius = '5px';
+        galleryContainer.appendChild(img);
+      });
+    }
+
+    // Cargar imágenes cuando la página esté lista
+    document.addEventListener('DOMContentLoaded', loadGalleryImages);
+  </script>
+</body></html>
